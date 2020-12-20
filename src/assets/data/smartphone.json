@@ -1,0 +1,16 @@
+[
+    {
+      "id": "P0001",
+      "name": "iPhone X",
+      "desc": "iPhone X 128GB Internal Memory",
+      "price": 499,
+      "updated": "Wed Sep 20 2019 17:22:41 GMT+0700"
+    },
+    {
+      "id": "P0002",
+      "name": "iPhone 11 Pro",
+      "desc": "Super Retina XDR display",
+      "price": 699,
+      "updated": "Wed Sep 20 2019 17:22:41 GMT+0700"
+    }
+  ]

@@ -3,33 +3,42 @@
  
   <p>
     <label for="firstname">First Name</label>
-    <input type="text" id="firstname" name="firstname" #fname="ngModel" ngModel>
+    <input type="text" id="firstname" name="firstname" [(ngModel)]="contact.firstname" #fname="ngModel" ngModel>
   </p>
-  <pre>Value    : {{fname.value}} </pre>
-  <pre>valid    : {{fname.valid}} </pre>
-  <pre>invalid  : {{fname.invalid}} </pre>
-  <pre>touched  : {{fname.touched}} </pre>
+ <!-- <pre>Value    : {{fname.value}} </pre>  -->
+ 
   <p>
     <label for="lastname">Last Name</label>
-    <input type="text" id="lastname" name="lastname" ngModel>
+    <input type="text" id="lastname" name="lastname" [(ngModel)]="contact.lastname"  ngModel>
   </p>
  
   <p>
     <label for="email">Email </label>
-    <input type="text" id="email" name="email" ngModel>
+    <input type="text" id="email" name="email" [(ngModel)]="contact.email"  ngModel>
   </p>
  
   <p>
     <label for="gender">Geneder</label>
-    <input type="radio" value="male" id="gender" name="gender" ngModel> Male
-    <input type="radio" value="female" id="gender" name="gender" ngModel> Female
+    <input type="radio" value="male" id="gender" name="gender" [(ngModel)]="contact.gender"  ngModel> Male
+    <input type="radio" value="female" id="gender" name="gender" [(ngModel)]="contact.gender"  ngModel> Female
   </p>
  
   <p>
     <label for="isMarried">Married</label>
-    <input type="checkbox" id="isMarried" name="isMarried" ngModel>
+    <input type="checkbox" id="isMarried" name="isMarried" [(ngModel)]="contact.isMarried"  ngModel>
   </p>
+  <div ngModelGroup="address">
  
+    <p>
+      <label for="city">City</label>
+      <input type="text" name="city" ngModel>
+    </p>
+ 
+    <p>
+      <label for="street">Street</label>
+      <input type="text" name="street" ngModel>
+    </p>
+</div>
   <p>
   <label for="country">country </label>
   <select name="country" id="country" ngModel>
@@ -40,6 +49,17 @@
   </select>
   </p>
  
+  <p>
+
+    <button type="button" (click)="changeCountry()">Change Country</button>
+    <button type="button" (click)="setDefaults()">Set Defaults</button>
+    <button type="button" (click)="patchValue()">Patch Value</button>
+    <button type="button" (click)="changeAddress()">Change Address</button>
+    <button type="button" (click)="reset()">Reset</button>
+    <button type="button" (click)="resetForm()">Reset Form</button>
+  </p>
+  
+
   <p>
     <button type="submit">Submit</button>
   </p>

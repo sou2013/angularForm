@@ -1,17 +1,15 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 // import { Component } from '@angular/core';
-import { MyCountry } from './my-country'
-import {contact} from './contact'
+import { MyCountry } from '../my-country'
+import {contact} from '../contact'
 import { NgForm, FormGroup } from '@angular/forms';
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './mainpage/mainpage.component.html',
-  styleUrls: ['./mainpage/mainpage.component.css']
-  //templateUrl: './app.component.html',
-  //styleUrls: ['./app.component.css']
+  selector: 'app-first-form',
+  templateUrl: './first-form.component.html',
+  styleUrls: ['./first-form.component.css']
 })
-export class AppComponent {
+export class FirstFormComponent implements OnInit {
+
   title = 'angularForm';
   contact:contact;
   //@ViewChild(NgForm) contactForm: NgForm;
@@ -99,5 +97,3 @@ export class country {
   }
 
 }
-
- 
